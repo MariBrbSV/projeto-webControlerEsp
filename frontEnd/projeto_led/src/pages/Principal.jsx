@@ -6,11 +6,14 @@ import { PiPlantDuotone } from "react-icons/pi";
 import { IoMdHelpBuoy } from "react-icons/io";
 import { FaRegLightbulb } from "react-icons/fa";
 import { WiHumidity } from "react-icons/wi";
+import { GiPlantRoots } from "react-icons/gi";
+
 import TelaLed from "./TelaLed";
 import BoiaStatus from "./BoiaStatus";
 import SensorDht from "./SensorDht";
 import SensorSolo from "./SensorSolo";
 import Home from "./Home";
+import Irrigacao from "./Irrigacao";
 
 
 export default function Principal() {
@@ -23,6 +26,7 @@ export default function Principal() {
     { to: "/BoiaStatus", label: "Status Boia", icon: <IoMdHelpBuoy /> },
     { to: "/SensorDht", label: "Sensor DHT", icon: <WiHumidity /> },
     { to: "/SensorSolo", label: "Sensor Solo", icon: <PiPlantDuotone /> },
+    { to: "/Irrigacao", label: "Irrigacao", icon: <GiPlantRoots /> },
     
   ];
 
@@ -78,9 +82,7 @@ export default function Principal() {
           >
             <MdMenu className="w-7 h-7" />
           </button>
-          <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-            🌐 Painel de Monitoramento
-          </h1>
+
         </header>
 
         <main>
@@ -91,7 +93,7 @@ export default function Principal() {
             <Route path="/BoiaStatus" element={<BoiaStatus />} />
             <Route path="/SensorDht" element={<SensorDht />} />
             <Route path="/SensorSolo" element={<SensorSolo />} />
-            
+            <Route path="/Irrigacao" element={<Irrigacao />} />
           </Routes>
         </main>
       </section>
