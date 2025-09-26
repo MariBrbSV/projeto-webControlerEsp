@@ -1,7 +1,7 @@
 import React from "react";
 import { FaTv, FaWater, FaThermometerHalf, FaSeedling } from "react-icons/fa";
 import { GiPlantRoots } from "react-icons/gi";
-
+import { WiRain } from "react-icons/wi"; // 👈 import do ícone de chuva
 
 export default function Home() {
   const projetos = [
@@ -10,7 +10,7 @@ export default function Home() {
     { nome: "Sensor DHT", link: "https://wokwi.com/projects/439911413298509825", icon: <FaThermometerHalf className="w-6 h-6 text-red-500" /> },
     { nome: "Sensor Solo", link: "https://wokwi.com/projects/440002415689994241", icon: <FaSeedling className="w-6 h-6 text-indigo-500" /> },
     { nome: "Irrigação", link: "https://wokwi.com/projects/441183543069407233", icon: <GiPlantRoots className="w-6 h-6 text-green-500" /> },
-
+    { nome: "Estado Chuva", link: "https://wokwi.com/projects/441277643454877697", icon: <WiRain className="w-6 h-6 text-blue-600" /> }, // 👈 novo item
   ];
 
   return (

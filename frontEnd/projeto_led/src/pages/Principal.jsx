@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Routes, Route, Link, useLocation } from "react-router-dom";
-import { PiHouseBold, PiUserFill } from "react-icons/pi";
+import { PiHouseBold } from "react-icons/pi";
 import { MdSettings, MdMenu, MdClose } from "react-icons/md";
 import { PiPlantDuotone } from "react-icons/pi";
 import { IoMdHelpBuoy } from "react-icons/io";
 import { FaRegLightbulb } from "react-icons/fa";
-import { WiHumidity } from "react-icons/wi";
+import { WiHumidity, WiRain } from "react-icons/wi";
 import { GiPlantRoots } from "react-icons/gi";
 
 import TelaLed from "./TelaLed";
@@ -14,7 +14,7 @@ import SensorDht from "./SensorDht";
 import SensorSolo from "./SensorSolo";
 import Home from "./Home";
 import Irrigacao from "./Irrigacao";
-
+import EstadoChuva from "./EstadoChuva";
 
 export default function Principal() {
   const [menuAberto, setMenuAberto] = useState(false);
@@ -27,7 +27,7 @@ export default function Principal() {
     { to: "/SensorDht", label: "Sensor DHT", icon: <WiHumidity /> },
     { to: "/SensorSolo", label: "Sensor Solo", icon: <PiPlantDuotone /> },
     { to: "/Irrigacao", label: "Irrigacao", icon: <GiPlantRoots /> },
-    
+    { to: "/EstadoChuva", label: "Estado Chuva", icon: <WiRain /> },
   ];
 
   return (
@@ -82,7 +82,6 @@ export default function Principal() {
           >
             <MdMenu className="w-7 h-7" />
           </button>
-
         </header>
 
         <main>
@@ -94,6 +93,7 @@ export default function Principal() {
             <Route path="/SensorDht" element={<SensorDht />} />
             <Route path="/SensorSolo" element={<SensorSolo />} />
             <Route path="/Irrigacao" element={<Irrigacao />} />
+            <Route path="/EstadoChuva" element={<EstadoChuva />} /> 
           </Routes>
         </main>
       </section>
